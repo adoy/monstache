@@ -46,7 +46,7 @@ jobs:
             adoy/monstache
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=ref,event=branch
+            type=raw,value=rel6
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
