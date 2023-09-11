@@ -8,6 +8,6 @@ RUN --mount=target=. \
     GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o /out/monstache .
 
 FROM alpine:3.17
-RUN /bin/sh -c apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates
 ENTRYPOINT ["/bin/monstache"]
 COPY --from=build /out/monstache /bin
