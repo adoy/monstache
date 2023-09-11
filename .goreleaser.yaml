@@ -20,8 +20,6 @@ before:
 builds:
 - id: monstache
   binary: monstache
-  env:
-  - CGO_ENABLED=0
   goos:
     - linux
     - darwin
